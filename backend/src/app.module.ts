@@ -6,6 +6,7 @@ import { AppController } from './app.controller';
 import { TrackModule } from './track/track.module';
 import { ConfigModule } from '@nestjs/config';
 import { FileModule } from './file/file.module';
+import { AlbumModule } from './album/album.module';
 @Module({
   imports: [
     ConfigModule.forRoot({ envFilePath: '.env' }),
@@ -13,6 +14,7 @@ import { FileModule } from './file/file.module';
     MongooseModule.forRoot(process.env.MONGODB),
     FileModule,
     TrackModule,
+    AlbumModule,
   ],
   controllers: [],
 })
