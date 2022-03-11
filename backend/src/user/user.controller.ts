@@ -12,7 +12,7 @@ import { FileFieldsInterceptor } from '@nestjs/platform-express';
 import { UserDto } from './dto/user.dto';
 import { UserService } from './user.service';
 
-@Controller('users')
+@Controller('user')
 export class UserController {
   constructor(private userService: UserService) {}
   @Post('addImage')
@@ -32,7 +32,7 @@ export class UserController {
     return this.userService.addTrack(id, trackId);
   }
 
-  @Post('addTrack')
+  @Post('addAbum')
   addUser(@Query('id') id: string, @Query('userId') albumId: string) {
     return this.userService.addAlbum(id, albumId);
   }
@@ -41,10 +41,10 @@ export class UserController {
   getAll(@Query('count') count: number, @Query('offset') offset: number) {
     return this.userService.getAll(count, offset);
   }
-  @Get('/id:id')
-  getOne(@Param('id') id: string) {
-    return this.userService.getOne(id);
-  }
+  // @Get('/id:id')
+  // getOne(@Param('id') id: string) {
+  //   return this.userService.getOne(id);
+  // }
 
   @Get('query')
   search(@Query('query') query: string) {

@@ -1,9 +1,10 @@
-import { Injectable, Query } from '@nestjs/common';
+import { HttpException, HttpStatus, Injectable, Query } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { FileService, FileType } from 'src/file/file.service';
 import { User, UserDocument } from './schemas/user.schema';
 import { UserDto } from './dto/user.dto';
+import * as bcrypt from 'bcrypt';
 
 @Injectable()
 export class UserService {
@@ -33,16 +34,32 @@ export class UserService {
 
   async addAlbum(id: string, albumId: string) {
     const user = await this.userModel.findById(id);
-    user.likeAlbom.push(albumId);
+    user.likeAlbum.push(albumId);
     user.save();
     return user;
   }
 
   async createUser(dto: UserDto) {
+    const consdition = await this.userModel.findOne({
+      email: dto.email,
+      include: { all: true },
+    });
+    if (consdition) {
+      throw new HttpException('not valuble email', HttpStatus.BAD_REQUEST);
+    }
+    const hastpassword = await bcrypt.hash(dto.password, 10);
     const user = await this.userModel.create({
       ...dto,
+      password: hastpassword,
     });
     return user;
+  }
+
+  async avaluble(email: string) {
+    return this.userModel.findOne({
+      where: { email },
+      include: { all: true },
+    });
   }
 
   async getAll(count = 10, offset = 0) {

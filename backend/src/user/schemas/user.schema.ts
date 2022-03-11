@@ -20,7 +20,7 @@ export class User {
   likeTrack: string[];
 
   @Prop()
-  likeAlbom: string[];
+  likeAlbum: string[];
 
   @Prop()
   image: string;
