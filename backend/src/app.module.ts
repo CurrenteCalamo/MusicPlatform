@@ -7,6 +7,7 @@ import { TrackModule } from './track/track.module';
 import { ConfigModule } from '@nestjs/config';
 import { FileModule } from './file/file.module';
 import { AlbumModule } from './album/album.module';
+import { UserModule } from './user/user.module';
 @Module({
   imports: [
     ConfigModule.forRoot({ envFilePath: '.env' }),
@@ -15,6 +16,7 @@ import { AlbumModule } from './album/album.module';
     FileModule,
     TrackModule,
     AlbumModule,
+    UserModule,
   ],
   controllers: [],
 })

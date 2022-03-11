@@ -16,7 +16,7 @@ import { TrackService } from './track.service';
 export class TrackController {
   constructor(private trackService: TrackService) {}
 
-  @Get('id/:id')
+  @Get('/id:id')
   listen(@Param('id') id: string) {
     this.trackService.listen(id);
     return this.trackService.listen(id);
