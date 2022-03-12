@@ -16,7 +16,6 @@ export class UserService {
   async findOne(username: string) {
     return await this.userModel.findOne({ username: username });
   }
-
   async addImage(id: string, image) {
     const imagePath = this.fileService.createFile(FileType.IMAGE, image);
     const user = await this.userModel.findById(id);

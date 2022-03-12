@@ -15,6 +15,7 @@ import { UserService } from './user.service';
 @Controller('user')
 export class UserController {
   constructor(private userService: UserService) {}
+
   @Post('addImage')
   @UseInterceptors(FileFieldsInterceptor([{ name: 'image', maxCount: 1 }]))
   addImage(@UploadedFiles() files, @Query('id') id: string) {
@@ -41,11 +42,6 @@ export class UserController {
   getAll(@Query('count') count: number, @Query('offset') offset: number) {
     return this.userService.getAll(count, offset);
   }
-  // @Get('/id:id')
-  // getOne(@Param('id') id: string) {
-  //   return this.userService.getOne(id);
-  // }
-
   @Get('query')
   search(@Query('query') query: string) {
     return this.userService.search(query);
