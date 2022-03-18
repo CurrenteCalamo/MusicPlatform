@@ -1,0 +1,21 @@
+.ProgressTrack {
+  display: flex;
+}
+.tmp {
+  --playback-bar-grid-gap: 8px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: var(--playback-bar-grid-gap);
+  justify-content: space-between;
+  width: 100%;
+}

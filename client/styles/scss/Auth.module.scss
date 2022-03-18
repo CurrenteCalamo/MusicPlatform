@@ -1,0 +1,55 @@
+@import '_mixins';
+
+.AuthWrapper {
+  @include wrapper();
+}
+.AuthContener {
+  margin-top: 10%;
+  margin-right: 15%;
+  margin-left: 15%;
+  font-size: 18px;
+  font: bold;
+}
+
+.input {
+  @include input();
+}
+.AuthOr {
+  display: flex;
+  justify-content: center;
+}
+
+.AuthFormFr {
+  width: 100%;
+}
+
+.AuthFormCheckbox {
+  display: flex;
+  align-items: center;
+}
+
+.AuthCheckbox {
+  display: flex;
+}
+.ButtonWrapper {
+  display: flex;
+  justify-content: center;
+}
+.FloatingButton {
+  @include button();
+}
+.AuthH1 {
+  margin-bottom: 1%;
+}
+@media screen and (max-width: 600px) {
+}
+@media screen and (max-width: 360px) {
+}
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.NavLink {
+  display: flex;
+}

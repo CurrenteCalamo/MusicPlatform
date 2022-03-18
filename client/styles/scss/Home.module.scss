@@ -1,0 +1,23 @@
+@import '_mixins';
+
+.HomeTrack {
+  font-family: EBGaramond;
+  text-transform: uppercase;
+}
+.HomeWrapper {
+  a {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  @include wrapper();
+}
+.HomeSeeAll {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 20%;
+}

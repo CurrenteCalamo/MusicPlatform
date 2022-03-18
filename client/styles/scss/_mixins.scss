@@ -1,0 +1,49 @@
+@mixin wrapper {
+  margin-left: 4%;
+  margin-right: 4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+@mixin input {
+  background: rgba(0, 0, 0, 0.5);
+  width: 95%;
+  height: 40px;
+  border: black;
+  font-size: 20px;
+  color: aliceblue;
+  border-radius: 45px;
+  padding-left: 2%;
+  border: none;
+  outline: none;
+}
+@mixin button {
+  display: flex;
+  text-decoration: bold;
+  text-transform: uppercase;
+  justify-content: center;
+  text-decoration: none;
+  display: inline-block;
+  width: 140px;
+  height: 40px;
+  line-height: 45px;
+  border-radius: 45px;
+  margin: 10px 20px;
+  border: none;
+  outline: none;
+  font-size: 10px;
+  text-align: center;
+  letter-spacing: 3px;
+  font-weight: 600;
+  color: #524f4e;
+  background: floralwhite;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  &:hover {
+    background: floralwhite;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
+    color: floralwhites;
+    transform: translateY(-7px);
+  }
+}

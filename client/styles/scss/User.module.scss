@@ -1,0 +1,10 @@
+.UserImage {
+  width: 140px;
+  height: 140px;
+  border-radius: 100px;
+  border: solid white 2px;
+  box-shadow: 0 0 250px 10px #000000;
+  &:hover {
+    background: rgba($color: #e4e4e4, $alpha: 0.4);
+  }
+}

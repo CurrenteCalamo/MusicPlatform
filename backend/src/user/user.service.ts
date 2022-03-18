@@ -26,9 +26,13 @@ export class UserService {
 
   async addTrack(id: string, trackId: string) {
     const user = await this.userModel.findById(id);
-    user.likeTrack.push(trackId);
-    user.save();
-    return user;
+    try {
+      user.likeTrack.push(trackId);
+      user.save();
+      return user;
+    } catch (e) {
+      return null;
+    }
   }
 
   async addAlbum(id: string, albumId: string) {

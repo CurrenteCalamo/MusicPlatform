@@ -23,7 +23,7 @@ export class UserController {
     return this.userService.addImage(id, image[0]);
   }
 
-  @Post('createUser')
+  @Post('create')
   createUser(@Body() dto: UserDto) {
     return this.userService.createUser(dto);
   }

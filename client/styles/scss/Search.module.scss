@@ -1,0 +1,9 @@
+@import '_mixins';
+
+.SearchWrapper {
+  height: 100vh;
+}
+
+.SearchInput {
+  @include input();
+}

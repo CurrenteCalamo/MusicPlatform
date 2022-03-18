@@ -1,0 +1,48 @@
+@import '_mixins';
+
+.CreateTrackWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.CreateTrackInput {
+  @include input();
+}
+
+.FloatingButton {
+  @include button();
+}
+.TrackItemWrapper {
+  background-color: rgba($color: #e4e4e4, $alpha: 0.2);
+
+  &:hover {
+    background-color: rgba($color: #e4e4e4, $alpha: 0.4);
+  }
+  width: 64%;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+.TrackContener {
+  display: flex;
+
+  align-items: center;
+  width: 80%;
+  color: white;
+  font-size: 16px;
+  margin: 1%;
+}
+.TrackItemSecond {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 25%;
+}
+
+.TrackItemTitle {
+  margin-left: 2%;
+}
+.TrackItemImage {
+  height: 25px;
+  width: 25px;
+}

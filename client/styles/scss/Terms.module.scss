@@ -1,0 +1,13 @@
+@import '_mixins';
+
+.TermsContener {
+  font-family: EBGaramond;
+  text-transform: uppercase;
+  a {
+    text-decoration: none;
+  }
+  margin-top: 15%;
+}
+.TermsWrapper {
+  @include wrapper();
+}

@@ -1,0 +1,153 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+html {
+  background-size: 400% 400%;
+  animation: gradient 1000s ease infinite;
+
+  background: url(../public/image/background.png);
+}
+@keyframes gradient {
+  100% {
+    background-position: 0% 1520%;
+  }
+}
+@font-face {
+  font-family: EBGaramLight;
+  src: url(./fonts/EBGaramLight.ttf);
+}
+@font-face {
+  font-family: GothamLight;
+  src: url(./fonts/GothamLight.ttf);
+}
+
+a {
+  @font-face {
+    font-family: HelveticaRegular;
+    src: url(./fonts/HelveticaRegular.ttf);
+  }
+  text-decoration: none;
+}
+body {
+  color: white;
+  font-family: EBGaramLight;
+}
+::-webkit-scrollbar {
+  width: 0;
+}
+::placeholder {
+  font-size: 18px;
+}
+
+input[type='password'],
+input[type='email'],
+input[type='name'],
+textarea,
+fieldset {
+  border: 1px solid #333;
+  box-sizing: border-box;
+}
+
+input:invalid {
+  box-shadow: 0 0 5px 1px #800000;
+}
+
+input:focus:invalid {
+  box-shadow: none;
+}
+
+input[type='range'] {
+  width: 200px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  overflow: hidden;
+  height: 7px;
+  border-radius: 3px;
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+  height: 7px;
+  background-color: grey;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  background: darkgray;
+  cursor: alias;
+  width: 10px;
+  height: 12px;
+  -webkit-appearance: none;
+  margin-top: -4px;
+  box-shadow: -200px 0 0 200px darkgray;
+}
+
+input[type='range']::-moz-range-track {
+  height: 7px;
+  background-color: grey;
+  border-radius: 50%;
+}
+
+input[type='range']::-moz-range-thumb {
+  background: darkgray;
+  cursor: pointer;
+  height: 7px;
+  box-shadow: -200px 0px 0px 200px darkgray;
+  padding: 0px;
+  margin: 0px;
+}
+.playpng {
+  background: center/100% no-repeat
+    url(../public/svg/outline_play_arrow_white_24dp.png);
+  width: 40px;
+  height: 40px;
+}
+.homepng {
+  background: center/100% no-repeat
+    url(../public/svg/outline_home_white_24dp.png);
+  width: 40px;
+  height: 40px;
+}
+.trackpng {
+  background: center/100% no-repeat
+    url(../public/svg/outline_music_note_white_24dp.png);
+  width: 40px;
+  height: 40px;
+}
+.albumpng {
+  background: center/100% no-repeat
+    url(../public/svg/outline_library_music_white_24dp.png);
+  width: 40px;
+  height: 40px;
+}
+.userpng {
+  background: center/100% no-repeat
+    url(../public/svg/outline_account_circle_white_24dp.png);
+  width: 40px;
+  height: 40px;
+}
+.searchpng {
+  background: center/100% no-repeat
+    url(../public/svg/outline_search_white_24dp.png);
+  width: 40px;
+  height: 40px;
+}
+.deletepng {
+  background: center/100% no-repeat
+    url(../public/svg/outline_delete_white_24dp.png);
+  width: 40px;
+  height: 40px;
+}
+.pausepng {
+  background: center/100% no-repeat
+    url(../public/svg/outline_pause_white_24dp.png);
+  width: 40px;
+  height: 40px;
+}
+.volumepng {
+  background: center/100% no-repeat
+    url(../public/svg/outline_volume_up_white_24dp.png);
+  width: 34px;
+  height: 34px;
+}

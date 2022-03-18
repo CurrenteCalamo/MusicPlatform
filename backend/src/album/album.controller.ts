@@ -12,7 +12,7 @@ import {
 import { FileFieldsInterceptor } from '@nestjs/platform-express';
 import { AlbumDto } from './dto/album.dto';
 
-@Controller('albums')
+@Controller('album')
 export class AlbumController {
   constructor(private albumService: AlbumService) {}
 
@@ -21,12 +21,15 @@ export class AlbumController {
     return this.albumService.getAll(count, offset);
   }
 
-  @Get('/id:id')
-  getOne(@Param('id') id: string) {
+  @Get('id')
+  getOne(@Query('id') id: string) {
     return this.albumService.getOne(id);
   }
-
-  @Get('query')
+  @Get('searchCreator')
+  searchCreator(@Query('id') id: string) {
+    return this.albumService.searchCreator(id);
+  }
+  @Get('search')
   search(@Query('query') query: string) {
     return this.albumService.search(query);
   }
@@ -39,5 +42,9 @@ export class AlbumController {
   @Post('dispatch')
   dispatch(@Query('id') id: string, @Query('trackId') trackId: string) {
     return this.albumService.dispatch(id, trackId);
+  }
+  @Get('delete')
+  delete(@Query('id') id: number) {
+    this.albumService.delete(id);
   }
 }
