@@ -11,21 +11,21 @@ const Search: NextPage = ({
   tracks: serverTrack,
   albums: serverAlbums,
 }: any) => {
-  const durka = useInput('')
+  const search = useInput('')
   const [tracks, setTrack] = useState(serverTrack)
   const [albums, setAlbum] = useState(serverAlbums)
   useEffect(() => {
     async function Load() {
-      fetch(`http://localhost:5000/track/search?query=${durka.value}`)
+      fetch(`http://localhost:5000/track/search?query=${search.value}`)
         .then((response) => response.json())
         .then((json) => setTrack(json))
-      fetch(`http://localhost:5000/album/search?query=${durka.value}`)
+      fetch(`http://localhost:5000/album/search?query=${search.value}`)
         .then((response) => response.json())
         .then((json) => setAlbum(json))
     }
 
     Load()
-  }, [durka.value])
+  }, [search.value])
   if (!tracks || !albums) {
     return (
       <NextNProgress
@@ -49,7 +49,7 @@ const Search: NextPage = ({
             placeholder="Artists, songs"
             type=""
             maxLength={100}
-            {...durka}
+            {...search}
           />
         </div>
         <div>
