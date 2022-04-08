@@ -1,4 +1,6 @@
 
+# MUSICPLATFORM
+Eternety is a digital music service that gives you access to millions of songs and other content from creators all over the world
 ## Example on herokuapp
  [https://eternety.com](https://eternety.herokuapp.com/)
 ## Running the app
