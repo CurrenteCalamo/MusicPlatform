@@ -8,12 +8,12 @@ Eternety is a digital music service that gives you access to millions of songs a
 ```bash
 # run the server
 $ cd backend;npm install
-$npm run start:dev
+$ npm run start:dev
 ```
 ```bash
 # run the client
 $ cd client;npm install
-$npm run dev
+$ npm run dev
 ```
 ## Stay in touch
 
